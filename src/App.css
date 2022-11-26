@@ -1,5 +1,24 @@
 .App {
   text-align: center;
+  width: "100%";
+  height: 100vh;
+  background-color: #282c34;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .App-logo {
@@ -14,8 +33,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +53,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.hug-button {
+  cursor: pointer;
+  width: 300px;
+  /* box-shadow: #282c34; */
+  /* text-shadow: 0 4px 8px 0 red, 0 6px 20px 0 red */
+  /* filter: drop-shadow(5px 5px 10px rgb(0 0 0 / 0.2)); */
+  transition-duration: 200ms;
+  user-select: none;
+  pointer-events: none;
+}
+
+.button-container {
+  padding: 20px;
+}
+
+.button-container:hover {
+  cursor: pointer;
+}
+
+.button-container:hover img {
+  transform: scale(0.95);
+}
+
+#reset-button {
+  border-radius: 0;
+  background-color: '#fff';
 }
